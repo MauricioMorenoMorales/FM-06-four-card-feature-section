@@ -1,0 +1,63 @@
+@import './_reset-styles.styl'
+@import './_tokens.styl'
+
+html
+	font-family ffPrimary
+
+header
+	text-align center
+	font-size fontSize
+	padding 0 10px
+	max-width 370px
+	margin 60px auto
+	h1
+		font-weight fwThin
+		color grayishBlue
+		font-size 2.7rem
+	h2
+		font-weight fwBold
+		color veryDarkBlue
+		font-size 2.7rem
+	p
+		color grayishBlue
+		font-size 1.7rem
+
+.description
+	max-width 370px
+	padding 0 10px
+	margin 0 auto
+	&__item
+		border-radius 4px
+		display flex
+		flex-direction column
+		padding 40px 30px
+		box-shadow shadow
+		margin-bottom 30px
+		max-height 270px
+		h3
+			color veryDarkBlue
+			margin 0
+		p
+			color grayishBlue
+		img
+			width 60px
+			height auto
+			align-self flex-end
+		&.p1
+			border-top 4px solid cyan
+		&.p2
+			border-top 4px solid red
+		&.p3
+			border-top 4px solid orange
+		&.p4
+			border-top 4px solid blue
+
+@media screen and (min-width 1230px)
+	header
+		max-width 600px
+	.description
+		display grid
+		grid-template-columns 33% 33% 33%
+		max-width 1230px
+		gap 20px
+		align-items center
